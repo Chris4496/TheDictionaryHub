@@ -26,5 +26,8 @@
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
     "vite-plugin-pwa": "^0.11.13"
+  },
+  "overrides": {
+    "csstype": "3.0.10"
   }
 }

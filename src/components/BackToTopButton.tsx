@@ -9,7 +9,6 @@ function BackToTopButton() {
   function handleScroll() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // for smoothly scrolling
     });
   }
 

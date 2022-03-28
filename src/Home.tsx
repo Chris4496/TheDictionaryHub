@@ -43,7 +43,7 @@ function Home() {
   useEffect(() => {
     const getWordOfTheDay = async () => {
       const response = await fetch(
-        "https://fastapi-backend-kubygcfq3a-ue.a.run.app/wotd"
+        "https://fastapi-backend-kubygcfq3a-ue.a.run.app/wotd/"
       );
       const json = await response.json();
       setWord(json);

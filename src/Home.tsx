@@ -14,6 +14,7 @@ import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
+import { Helmet } from "react-helmet";
 
 import Footer from "./components/Footer";
 import BackToTopButton from "./components/BackToTopButton";
@@ -79,49 +80,54 @@ function Home() {
   if (error) return <Center>Error: {error.message}</Center>;
 
   return (
-    <Box>
-      <HStack my={3} mx={1}>
-        <ColorModeSwitcher></ColorModeSwitcher>
-        {/* <CustomizePopup
+    <>
+      <Helmet>
+        <title>{`Dictionary - ${word}`}</title>
+      </Helmet>
+      <Box>
+        <HStack my={3} mx={1}>
+          <ColorModeSwitcher></ColorModeSwitcher>
+          {/* <CustomizePopup
           setdictList={setdictList}
           setCookie={setCookie}
           dictList={dictList}
         /> */}
-      </HStack>
-      <Center>
-        <Heading fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}>
-          Search a word and get results from multiple dictionaries
-        </Heading>
-      </Center>
-      <Center>
-        <Input
-          placeholder="Search here.."
-          autoComplete="off"
-          size="lg"
-          maxWidth={1200}
-          m={3}
-          type="text"
-          name="textvalue"
-          onKeyDown={searchWordEnter}
-          ref={inputref}
-          boxShadow="lg"
-        />
-        <IconButton
-          aria-label="Search"
-          icon={<SearchIcon />}
-          mr={3}
-          onClick={searchWord}
-        />
-      </Center>
-      <Center maxWidth={1200} m="auto">
-        <NavBar dictList={data} />
-      </Center>
-      {data.map((dict: any) => (
-        <DisplayDict word={word} dict={dict} key={dict.name} />
-      ))}
-      <Footer />
-      <BackToTopButton />
-    </Box>
+        </HStack>
+        <Center>
+          <Heading fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}>
+            Search a word and get results from multiple dictionaries
+          </Heading>
+        </Center>
+        <Center>
+          <Input
+            placeholder="Search here.."
+            autoComplete="off"
+            size="lg"
+            maxWidth={1200}
+            m={3}
+            type="text"
+            name="textvalue"
+            onKeyDown={searchWordEnter}
+            ref={inputref}
+            boxShadow="lg"
+          />
+          <IconButton
+            aria-label="Search"
+            icon={<SearchIcon />}
+            mr={3}
+            onClick={searchWord}
+          />
+        </Center>
+        <Center maxWidth={1200} m="auto">
+          <NavBar dictList={data} />
+        </Center>
+        {data.map((dict: any) => (
+          <DisplayDict word={word} dict={dict} key={dict.name} />
+        ))}
+        <Footer />
+        <BackToTopButton />
+      </Box>
+    </>
   );
 }
 

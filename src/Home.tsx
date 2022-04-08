@@ -38,6 +38,14 @@ function Home() {
     fetchDictList
   );
 
+  const [dictList, setDictList] = useState<any>([]);
+
+  useEffect(() => {
+    if (data) {
+      setDictList(data);
+    }
+  }, [data]);
+
   const [word, setWord] = useState(params.word || "");
   const inputref = useRef<HTMLInputElement>(null);
 
@@ -119,9 +127,9 @@ function Home() {
           />
         </Center>
         <Center maxWidth={1200} m="auto">
-          <NavBar dictList={data} />
+          <NavBar dictList={dictList} />
         </Center>
-        {data.map((dict: any) => (
+        {dictList.map((dict: any) => (
           <DisplayDict word={word} dict={dict} key={dict.name} />
         ))}
         <Footer />

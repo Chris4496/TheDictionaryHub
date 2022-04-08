@@ -9,7 +9,7 @@ import {
   OrderedList,
   ListItem,
 } from "@chakra-ui/react";
-import { InfoOutlineIcon } from "@chakra-ui/icons";
+import { FaVolumeUp } from "react-icons/fa";
 
 import { entry } from "../types";
 
@@ -54,7 +54,7 @@ function Entry({ id, word, wordType, audioLinks, explanation }: entry) {
               aria-label="Play Sound"
               size="sm"
               variant="ghost"
-              icon={<InfoOutlineIcon />}
+              icon={<FaVolumeUp />}
               onClick={() => new Audio(audio.link).play()}
             />
           </HStack>

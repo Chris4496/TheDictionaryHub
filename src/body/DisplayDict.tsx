@@ -8,6 +8,7 @@ import {
   SkeletonText,
   Link,
   Container,
+  Box,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -75,17 +76,32 @@ function DisplayDict(props: Props) {
 
   return (
     <div id={dictName}>
-      <Center p={10}>
-        {dictName == "synant" ? (
-          <Heading fontSize={{ base: "2xl", lg: "3xl" }}>
-            Synonyms and antonyms from thesaurus.com
-          </Heading>
-        ) : (
-          <Heading fontSize={{ base: "2xl", lg: "3xl" }}>
-            Result from {dictName[0].toUpperCase() + dictName.slice(1)}{" "}
-            Dictionary
-          </Heading>
-        )}
+      <Center p={4}>
+        <Container maxW={1000}>
+          <Box
+            borderRadius="md"
+            px={4}
+            py={2}
+            // bgColor="teal.500"
+            w="fit-content"
+          >
+            {dictName == "synant" ? (
+              <>
+                <Heading fontSize={{ base: "2xl", lg: "3xl" }}>
+                  Synonyms and antonyms
+                </Heading>
+                <Heading fontSize={{ base: "lg", lg: "xl" }}>
+                  from thesaurus.com
+                </Heading>
+              </>
+            ) : (
+              <Heading fontSize={{ base: "2xl", lg: "3xl" }}>
+                {dictName[0].toUpperCase() + dictName.slice(1)} Dictionary's
+                results
+              </Heading>
+            )}
+          </Box>
+        </Container>
       </Center>
       <Divider orientation="horizontal" borderColor="grey.200" />
       <Center>

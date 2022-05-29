@@ -102,7 +102,10 @@ function Home() {
         /> */}
         </HStack>
         <Center>
-          <Heading fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}>
+          <Heading
+            textAlign="center"
+            fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+          >
             Search a word and get results from multiple dictionaries
           </Heading>
         </Center>

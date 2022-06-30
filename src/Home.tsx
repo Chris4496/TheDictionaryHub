@@ -55,7 +55,12 @@ function Home() {
         "https://fastapi-backend-kubygcfq3a-ue.a.run.app/wotd/"
       );
       const json = await response.json();
-      setWord(json);
+      // check if word is already in the url
+      if (params.word) {
+        navigate(`/search/${params.word}`);
+      } else {
+        setWord(json);
+      }
     };
     getWordOfTheDay();
   }, []);

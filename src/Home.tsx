@@ -52,7 +52,7 @@ function Home() {
   useEffect(() => {
     const getWordOfTheDay = async () => {
       const response = await fetch(
-        "https://fastapi-backend-kubygcfq3a-ue.a.run.app/wotd/"
+        "https://dict-api-kubygcfq3a-uc.a.run.app/wotd/"
       );
       const json = await response.json();
       // check if word is already in the url

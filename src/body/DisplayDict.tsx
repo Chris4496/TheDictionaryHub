@@ -34,7 +34,7 @@ function DisplayDict(props: Props) {
   const dictName: string = props.dict.name;
   const searchQuery: string = props.dict.searchQuery;
 
-  const url = `https://fastapi-backend-kubygcfq3a-ue.a.run.app/${dictName}/?search=${word}`;
+  const url = `https://dict-api-kubygcfq3a-uc.a.run.app/${dictName}/?search=${word}`;
 
   const fetchData = async (word: string): Promise<any> => {
     const response = await fetch(url);

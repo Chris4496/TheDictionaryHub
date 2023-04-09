@@ -23,7 +23,7 @@ import DisplayDict from "./body/DisplayDict";
 
 const fetchDictList = async () => {
   const response = await fetch(
-    "https://fastapi-backend-kubygcfq3a-ue.a.run.app/"
+    "https://dict-api-kubygcfq3a-uc.a.run.app"
   );
   const json = await response.json();
   return json;

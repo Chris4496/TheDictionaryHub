@@ -107,12 +107,21 @@ function Home() {
         /> */}
         </HStack>
         <Center>
-          <Heading
-            textAlign="center"
-            fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
-          >
-            Search a word and get results from multiple dictionaries
-          </Heading>
+          <VStack mb={4}>
+            <Heading
+              textAlign="center"
+              fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+            >
+              The Dictionary Hub -
+            </Heading>
+
+            <Heading
+              textAlign="center"
+              fontSize={{ base: "md", md: "lg", lg: "xl" }}
+            >
+              Search a word and get results from multiple dictionaries
+            </Heading>
+          </VStack>
         </Center>
         <Center>
           <Input

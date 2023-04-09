@@ -18,7 +18,7 @@ function Footer() {
         </Text>
         <IconButton
           as="a"
-          href="https://github.com/Chris4496/DictionarySearcher"
+          href="https://github.com/Chris4496/TheDictionaryHub"
           aria-label="GitHub"
           icon={<FaGithub fontSize="20px" />}
         />

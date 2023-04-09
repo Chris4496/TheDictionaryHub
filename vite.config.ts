@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), VitePWA({
     includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
     manifest: {
-      name: 'Dictionary Searcher',
+      name: 'The Dictionary Hub',
       short_name: 'Dictionary',
       description: 'Definations from multipule dictionaries',
       theme_color: '#ffffff',

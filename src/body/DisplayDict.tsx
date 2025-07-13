@@ -91,7 +91,7 @@ function DisplayDict(props: Props) {
                   Synonyms and antonyms
                 </Heading>
                 <Heading fontSize={{ base: "lg", lg: "xl" }}>
-                  from thesaurus.com
+                  from datamuse API
                 </Heading>
               </>
             ) : (
@@ -116,7 +116,7 @@ function DisplayDict(props: Props) {
         >
           {data.map((entry: any) =>
             dictName == "synant" ? (
-              <SynAntEntry key={entry.definition} {...entry} />
+              <SynAntEntry key={entry} {...entry} />
             ) : (
               <Entry key={entry.id} {...entry} />
             )
